@@ -10,8 +10,12 @@ import (
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	receivedText, _ := reader.ReadString('\n')
-	receivedText = deleteAllWhiteSpacesAndTrimString(receivedText)
-	detectIfPangram(receivedText)
+	fmt.Println(detectIfPangramOrNot(receivedText))
+}
+
+func detectIfPangramOrNot(stringPassed string) string{
+	stringPassed = deleteAllWhiteSpacesAndTrimString(stringPassed)
+	return detectIfPangram(stringPassed)
 }
 
 func deleteAllWhiteSpacesAndTrimString(stringToTrim string) string{
@@ -21,7 +25,7 @@ func deleteAllWhiteSpacesAndTrimString(stringToTrim string) string{
 	return stringToTrim
 }
 
-func detectIfPangram(receivedText string){
+func detectIfPangram(receivedText string) string {
 	//Imitating set with map, golang lack of so
 	allLetters := make(map[byte]bool)
 	for i := 0; i < len(receivedText); i++ {
@@ -29,9 +33,9 @@ func detectIfPangram(receivedText string){
 	}
 
 	if len(allLetters) == 26 {
-		fmt.Println("pangram")
+		return "pangram"
 	} else {
-		fmt.Println("not pangram")
+		return "not pangram"
 	}
 }
 
