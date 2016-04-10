@@ -5,7 +5,6 @@ import (
 	"bufio"
 	"os"
 	"strings"
-	"testing"
 )
 
 func main() {
