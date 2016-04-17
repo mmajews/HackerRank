@@ -23,7 +23,7 @@ func main() {
 	for i := numberOfTestCases; i > 0; i-- {
 		var twoStrings [2]string
 		twoStrings = getTwoStringsFromInput(reader)
-		detectIfCommonSubStringExists(twoStrings[0], twoStrings[1])
+		fmt.Println(detectIfCommonSubStringExists(twoStrings[0], twoStrings[1]))
 	}
 }
 
@@ -43,7 +43,7 @@ func getTwoStringsFromInput(reader *bufio.Reader) [2]string {
 	return arrayToReturn;
 }
 
-func detectIfCommonSubStringExists(firsString string, secondString string) {
+func detectIfCommonSubStringExists(firsString string, secondString string) string {
 	firstStringLetters := make(map[byte]bool)
 	for i := 0; i < len(firsString); i++ {
 		firstStringLetters[firsString[i]] = true
@@ -51,11 +51,9 @@ func detectIfCommonSubStringExists(firsString string, secondString string) {
 
 	for i := 0; i < len(secondString); i++ {
 		if firstStringLetters[secondString[i]] == true {
-			fmt.Println("YES")
-			return
+			return "YES"
 		}
 	}
-
-	fmt.Println("NO")
+	return "NO"
 }
 
