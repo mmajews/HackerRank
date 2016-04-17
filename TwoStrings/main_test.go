@@ -22,7 +22,7 @@ func shouldCorrectlyDetectThatTwoStringsHaveSomeStringInCommon(t *testing.T) {
 	testCase0 := [2]string{"hellow", "world"}
 	testCase1 := [2]string{"hi", "world"}
 
-	toBeTested := [2][]string{testCase0, testCase1}
+	toBeTested := [2][2]string{testCase0, testCase1}
 	expected := [2]string{"YES", "NO"}
 
 	for index, element := range toBeTested {
