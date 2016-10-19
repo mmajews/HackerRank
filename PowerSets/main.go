@@ -19,7 +19,6 @@ func main(){
 func generateAllPowerSets(input string) map[string]bool{
 	powerSets := make(map[string]bool)
 	characters := make([]rune,0,0);
-	//lenOfString := len(input)
 	for _, r := range input{
 		characters = append(characters,r)
 	}
