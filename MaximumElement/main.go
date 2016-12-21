@@ -1,5 +1,6 @@
 package main
 
+//FIXME NOW DO NOT KNOW WHAT HACKERANK TASK IT WAS
 import (
 	"bufio"
 	"os"
@@ -13,7 +14,6 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	numberOfLinesReadFromInput, _ := reader.ReadString('\n')
 	numberOfLinesToBeReceived, _ := strconv.Atoi(numberOfLinesReadFromInput)
-	numberOfLinesToBeReceived = trimString(numberOfLinesToBeReceived)
 
 	for i := 0; i < numberOfLinesToBeReceived; i++ {
 		line, _ := reader.ReadString('\n')
