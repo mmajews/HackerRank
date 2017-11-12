@@ -1,2 +1,2 @@
 # HackerRank
-HackeRank problems solved using Go
+HackeRank problems solved using Go or Java
