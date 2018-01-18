@@ -17,7 +17,6 @@ public class Solution {
         long minimalSum = 0;
         long maximumSum = 0;
 
-
         for (int i = 0; i < 4; i++) {
             minimalSum += elements.get(i);
         }
